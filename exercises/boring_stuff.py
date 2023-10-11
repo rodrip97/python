@@ -33,15 +33,53 @@ for i in range(5):
 
 # guess the number exercise
 
-import random
-import sys
-guess_number = random.randint(1,10)
+""" import random
+
+guess_number = random.randint(1, 10)
 guess = ''
+
 print('Try to guess the number between 1 and 10:')
-guess = input()
+while True:
+    guess = int(input())  
+
+    if guess < guess_number:
+        print('Try Again. Your guess is too low.')
+    elif guess > guess_number:
+        print('Try Again. Your guess is too high.')
+    else:
+        print('You got it!!')
+        break  """
+
+""" import time, sys
+indent = 0
+
+indentIncreasing = True 
+try:
+    while True:
+        print(' ' * indent, end='')
+        print('********')
+        time.sleep(0.3)
+
+        if indentIncreasing:
+            indent = indent + 1
+            if indent == 20:
+                indentIncreasing = False
+
+        else:
+            indent = indent - 1
+            if indent == 0:
+                indentIncreasing = True
+except KeyboardInterrupt:
+    sys.exit() """
 
 
-if guess != guess_number:
-    print('Try Again:')
-else:
-    print('You got it!!')
+""" data = ['1','2','3','4','5','6','7']
+
+for i in data:
+    print(i)
+ """
+
+catName = []
+
+while True: 
+    print('Enter desired cat name:')
