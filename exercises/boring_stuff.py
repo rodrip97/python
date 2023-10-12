@@ -79,7 +79,47 @@ for i in data:
     print(i)
  """
 
-catName = []
+""" catNames = []
+while True:
+    print('Enter the name of cat ' + str(len(catNames) + 1) +
+      ' (Or enter nothing to stop.):')
+    name = input()
+    if name == '':
+        break
+    catNames = catNames + [name]  
+print('The cat names are:')
+for name in catNames:
+    print('  ' + name) """
 
-while True: 
-    print('Enter desired cat name:')
+
+#supplies = ['pens', 'pencils','scissors','rubber','flamethrower','dildo',]
+
+""" for i in range(len(supplies)):
+    print('Item: ' + str(i + 1 ) + ' in supplies is: ' + supplies[i]) """
+# same thing but using enumerate rather than range
+
+""" for index, item in enumerate(supplies):
+    print('Item #' + str(index+1) + ' in supplies is: ' + item) """
+
+""" import random
+supplies = ['pens', 'pencils','scissors','rubber','flamethrower','dildo',]
+
+for i in range(3):
+    print(random.choice(supplies)) """
+
+# magic ball game
+
+import random
+
+messages = [
+    'It is decidedly so',
+    'Yes definitely',
+    'Reply hazy try again',
+    'Ask again later',
+    'Concentrate and ask again',
+    'My reply is no',
+    'Outlook not so good',
+    'Very doubtful'
+]
+
+print(messages[random.randint(0, len(messages)-1)])
