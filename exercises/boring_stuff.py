@@ -109,7 +109,7 @@ for i in range(3):
 
 # magic ball game
 
-import random
+""" import random
 
 messages = [
     'It is decidedly so',
@@ -122,4 +122,12 @@ messages = [
     'Very doubtful'
 ]
 
-print(messages[random.randint(0, len(messages)-1)])
+print(messages[random.randint(0, len(messages)-1)]) """
+
+list1 = ['items', 'dildos']
+list2 = list1
+list2[1] = "spam"
+
+print(list1)
+print(list2)
+
