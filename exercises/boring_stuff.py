@@ -123,7 +123,7 @@ messages = [
 ]
 
 print(messages[random.randint(0, len(messages)-1)]) """
-
+""" 
 list1 = ['items', 'dildos']
 list2 = list1
 list2[1] = "spam"
@@ -131,3 +131,58 @@ list2[1] = "spam"
 print(list1)
 print(list2)
 
+ """
+
+
+""" ### Roman Numerals
+def romanToInt(s):
+    roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    total = 0
+    prev_value = 0
+    
+    for symbol in s:
+        current_value = roman_dict[symbol]
+        if current_value > prev_value:
+            total += current_value - 2 * prev_value
+        else:
+            total += current_value
+        prev_value = current_value
+    
+    return total
+
+
+print(romanToInt("I"))
+print(romanToInt("III"))
+print(romanToInt("IV"))
+print(romanToInt("VIII"))
+print(romanToInt("XIII"))
+
+ """
+
+###################################################################################
+#################### Pattern Matching With Regular Expressions ####################
+###################################################################################
+def isPhoneNumber(text):
+    if len(text) != 12:
+        return False
+    for i in range(0,3):
+        if not text[i].isdecimal():
+            return False
+    if text[3] != '-':
+        return False
+    for i in range(4,7):
+        if not text[i].isdecimal():
+            return False
+    if text[7] != '-':
+        return False
+    for i in range(8,12):
+        if not text[i].isdecimal():
+            return False
+        
+    return True
+
+
+print('Is 415-555-4242 a phone number?')
+print(isPhoneNumber('415-555-4242'))
+print('Is Moshi moshi a phone number?')
+print(isPhoneNumber('Moshi moshi'))
