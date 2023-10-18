@@ -1,9 +1,21 @@
-import tkinter as tk
+def add(n1, n2):
+    return n1 + n2
 
-#the goal of this exercise is to create a calculator. Nothing fancy but it needs to work well
+def sub(n1,n2):
+    return n1 - n2 
 
-def sum(a, b):
-    return a+b
-def subtract (a,b):
-    return a-b
+def multiply(n1,n2):
+    return n1 * n2
 
+def divide(n1,n2):
+    return n1 / n2
+
+
+operatrions = {
+    '+' : add,
+    '-' : sub,
+    '*' : multiply,
+    '/' : divide,
+}
+
+num1 = input("What's the first number?:")
